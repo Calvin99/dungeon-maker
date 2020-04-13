@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Dungeon Maker</title>
+		<!--link href='map.css' rel='stylesheet' type='text/css'-->
+	</head>
+	<body height="4800" style="background-color: #333;">
+		<canvas id="dungeon" width="500" height="500" onmouseover="mouse.hover = true;" onmouseleave="mouse.hover = false;" style="float: left; padding-right: 10px;"></canvas>
+		<div id="controls" style="display: block; float: left;">
+			<input type="checkbox" id="dots" onchange="dots = document.getElementById('dots').checked;" checked>Show Dots</input><br/><br/>
+			<select id = "mode" onchange="mouse.mode = parseInt(document.getElementById('mode').value);" style="cursor: context-menu; width: 90">
+				<option value=0>Edit Grid</option>
+				<option value=1>Edit Walls</option>
+			</select><br/><br/>
+			<button onclick="clearWalls();" id="clear">Clear Walls</button>
+			<button onclick="smartWalls();" id="smart">Smart Walls</button><br/><br/>
+			<input type="checkbox" id="finished" onchange="finished = document.getElementById('finished').checked;">Finished View</input><br/>
+		</div>
+	</body>
+	<script src="scripts/dungeon.js"></script>
+<html>
