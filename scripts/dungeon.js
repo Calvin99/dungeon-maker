@@ -174,7 +174,7 @@ function draw() {
 		mask.globalCompositeOperation = 'source-over';
 	}
 	
-	if (dots) {
+	if (dots && !finished) {
 		ctx.fillStyle = "black";
 		for(x = 1; x < WIDTH / 20; ++x) {
 			for(y = 1; y < HEIGHT / 20; ++y) {
